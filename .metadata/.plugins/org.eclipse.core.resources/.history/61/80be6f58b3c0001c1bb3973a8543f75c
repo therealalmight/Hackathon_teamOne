@@ -1,0 +1,38 @@
+package TestSuite;
+
+// import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import Pages.CarInsurance;
+import Pages.HealthInsurances;
+import Pages.TravelInsurance;
+
+
+public class Travel {
+	@Test
+	public void testTravelInsurance() throws InterruptedException
+	{
+		TravelInsurance ti = new TravelInsurance();
+		ti.driverSetup();
+		ti.openUrl();
+		ti.travel();
+		ti.closeBrowser();
+	}
+	@Test
+	public void testCarInsurance() throws InterruptedException {
+		CarInsurance ci = new CarInsurance();
+		ci.driverSetup();
+		ci.openUrl();
+		ci.car();
+		ci.closeBrowser();
+	}
+	@Test
+	public void testHealthInsurance() throws InterruptedException {
+		HealthInsurances hi = new HealthInsurances();
+		hi.driverSetup();
+		hi.openUrl();
+		hi.list();
+		hi.closeBrowser();
+	}
+
+}
